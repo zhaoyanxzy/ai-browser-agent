@@ -1,3 +1,7 @@
+"""
+This script scrapes course data from Deeplearning.ai, extracts structured information using OpenAI’s GPT-4 model, and visualizes the results. It fetches course details like titles, descriptions, presenters, image URLs, and course URLs, and also captures a screenshot of the webpage.
+"""
+
 import asyncio
 import json
 import os
@@ -12,7 +16,7 @@ from PIL import Image
 from tabulate import tabulate
 from IPython.display import display, HTML, Markdown
 from pydantic import BaseModel
-from helper import get_openai_api_key, visualizeCourses
+from utils import get_openai_api_key, visualizeCourses
 
 client = OpenAI(api_key=get_openai_api_key())
 nest_asyncio.apply()
